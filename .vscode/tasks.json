@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build GTK4 App (UCRT64)",
+        "type": "shell",
+        "command": "C:\\msys64\\usr\\bin\\bash.exe",
+        "args": [
+          "-lc",
+          "source /etc/profile && /ucrt64/bin/gcc main.c $(/ucrt64/bin/pkg-config --cflags --libs gtk4) -o gtk4-app.exe"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
+  
